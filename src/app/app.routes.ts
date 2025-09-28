@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormFavoriteCar } from './components/pages/form-favorite-car/form-favorite-car';
 import { PaginaInicial } from './components/initial_layout/pagina-inicial/pagina-inicial';
+import { FormList } from './components/pages/form-list/form-list';
 
 export const routes: Routes = [
   { path: '', component:  PaginaInicial},
-  { path: 'form-carro-favorito', component: FormFavoriteCar }
+  { path: 'usersList', component: FormList }
 ];
 
 @NgModule({
