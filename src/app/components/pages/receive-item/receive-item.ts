@@ -3,12 +3,12 @@ import { Item } from '../../../models/item.model';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-receive-user',
+  selector: 'app-receive-item',
   imports: [FormsModule],
   standalone: true,
-  templateUrl: './receive-user.html',
-  styleUrl: './receive-user.scss'
+  templateUrl: './receive-item.html',
+  styleUrl: './receive-item.scss'
 })
-export class ReceiveUser {
+export class ReceiveItem {
   item!: Item; //Ver um jeito de add um id pra essa porcaria
 }
