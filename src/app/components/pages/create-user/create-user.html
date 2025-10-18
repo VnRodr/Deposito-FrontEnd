@@ -1,0 +1,16 @@
+<form action="" (ngSubmit)="onSubmit()">
+
+        <label for="userName">Insert the user first name:</label>
+        <input [(ngModel)]="user.firstName" name="userFirstName" id="userFirstName" />
+
+        <label for="userLast">Insert the user last name:</label>
+        <input [(ngModel)]="user.lastName" name="userLastName" id="userLastName" />
+
+        <label for="userEmail">Insert the user email:</label>
+        <input [(ngModel)]="user.email" name="userEmail" id="userEmail" />
+
+        <label for="userPhoneNumber">Insert the user phone number:</label>
+        <input [(ngModel)]="user.phoneNumber" name="userPhoneNumber" id="userPhoneNumber" />
+
+        <button pButton severity="secondary" type="submit"><span pButtonLabel>Submit</span></button>
+</form>

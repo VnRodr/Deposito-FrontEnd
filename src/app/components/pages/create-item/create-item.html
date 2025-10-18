@@ -1,4 +1,5 @@
 <form action="" (ngSubmit)="onSubmit()">
+
         <label for="itemName">Insert the item name:</label>
         <input [(ngModel)]="item.itemName" name="itemName" id="itemName" />
 
@@ -6,15 +7,13 @@
         <input [(ngModel)]="item.itemOwner" name="itemOwner" id="itemOwner" />
 
         <label for="itemType">Insert the item type:</label>
-        <input [(ngModel)]="item.itemType" name="itemPrice" id="itemType" />
+        <input [(ngModel)]="item.itemType" name="itemType" id="itemType" />
 
         <label for="itemPrice">Insert the item price:</label>
         <input [(ngModel)]="item.price" name="itemPrice" id="itemPrice" />
 
         <label for="itemQuantity">Insert the item quantity:</label>
         <input [(ngModel)]="item.quantity" name="itemQuantity" id="itemQuantity" />
-
-        <input type="submit" value="">
 
         <button pButton severity="secondary" type="submit"><span pButtonLabel>Submit</span></button>
         <!-- Do an event confirm who generate the uuid, then create the item-->
