@@ -12,11 +12,11 @@ export class UserService {
   constructor(private html:HttpClient){}
 
   getUsers():Observable<User[]>{
-    return this.html.get<User[]>(environment+"/users");
+    return this.html.get<User[]>(environment.apiBaseUrl+"/user/users");
   }
 
   postUser(user:User):Observable<User>{
-    return this.html.post<User>(environment+"/create-user", user);
+    return this.html.post<User>(environment.apiBaseUrl+"/user/create-user", user);
   }
 
 }
