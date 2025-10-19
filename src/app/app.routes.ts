@@ -1,15 +1,15 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { PaginaInicial } from './components/initial_layout/pagina-inicial/pagina-inicial';
-import { FormList } from './components/pages/form-list/form-list';
+import { CreateUser } from './components/pages/user-page/create-user/create-user';
 
 export const routes: Routes = [
-  { path: '', component:  PaginaInicial},
-  { path: 'usersList', component: FormList }
+  { 
+    path: '', 
+    component:  PaginaInicial,
+    children:[
+    {path: 'user/create-user', component: CreateUser}
+    ]
+  }
+
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRouteModule{}
