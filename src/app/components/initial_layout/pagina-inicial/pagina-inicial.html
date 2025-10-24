@@ -1,8 +1,10 @@
-<div class="card flex justify-center">   
-    <h1 class="mx-auto p2" style="width: 300px;">Bem vindos a página inicial!</h1>
+<div class="card position-relative">
+    <h1 class="mx-auto pb-3 pt-2">Bem vindos a página inicial!</h1>
 
-    <p-selectbutton [options]="pageSelection" [(ngModel)]="value" optionLabel="label" 
-    optionValue="value" aria-labelledby="basic" (onChange)="onClick()" />
+    <div class="mx-auto pb-2">
+        <p-selectbutton  [options]="pageSelection" [(ngModel)]="value" optionLabel="label" 
+        optionValue="value" aria-labelledby="basic" (onChange)="onClick()" />
+    </div>
 
     <router-outlet></router-outlet>
 </div>

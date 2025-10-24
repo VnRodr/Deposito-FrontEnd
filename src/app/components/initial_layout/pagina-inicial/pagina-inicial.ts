@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { PaginaInicialHeader } from './pagina-inicial-header/pagina-inicial-header';
 import { FormList } from "../../pages/form-list/form-list";
 import { SelectButton } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';

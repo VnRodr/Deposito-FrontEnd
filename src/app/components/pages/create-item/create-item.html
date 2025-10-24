@@ -1,20 +1,32 @@
-<form action="" (ngSubmit)="onSubmit()">
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <form (ngSubmit)="onSubmit()" class="d-flex flex-column p-4 border rounded bg-light shadow-sm" style="width: 300px;">
+    <div class="mb-3">
+      <label for="itemName" class="form-label">Insert the item name:</label>
+      <input [(ngModel)]="item.itemName" name="itemName" id="itemName" class="form-control" />
+    </div>
 
-        <label for="itemName">Insert the item name:</label>
-        <input [(ngModel)]="item.itemName" name="itemName" id="itemName" />
+    <div class="mb-3">
+      <label for="itemOwner" class="form-label">Insert the item owner:</label>
+      <input [(ngModel)]="item.itemOwner" name="itemOwner" id="itemOwner" class="form-control" />
+    </div>
 
-        <label for="itemOwner">Insert the item owner:</label>
-        <input [(ngModel)]="item.itemOwner" name="itemOwner" id="itemOwner" />
+    <div class="mb-3">
+      <label for="itemType" class="form-label">Insert the item type:</label>
+      <input [(ngModel)]="item.itemType" name="itemType" id="itemType" class="form-control" />
+    </div>
 
-        <label for="itemType">Insert the item type:</label>
-        <input [(ngModel)]="item.itemType" name="itemType" id="itemType" />
+    <div class="mb-3">
+      <label for="itemPrice" class="form-label">Insert the item price:</label>
+      <input [(ngModel)]="item.price" name="itemPrice" id="itemPrice" class="form-control" />
+    </div>
 
-        <label for="itemPrice">Insert the item price:</label>
-        <input [(ngModel)]="item.price" name="itemPrice" id="itemPrice" />
+    <div class="mb-3">
+      <label for="itemQuantity" class="form-label">Insert the item quantity:</label>
+      <input [(ngModel)]="item.quantity" name="itemQuantity" id="itemQuantity" class="form-control" />
+    </div>
 
-        <label for="itemQuantity">Insert the item quantity:</label>
-        <input [(ngModel)]="item.quantity" name="itemQuantity" id="itemQuantity" />
-
-        <button pButton severity="secondary" type="submit"><span pButtonLabel>Submit</span></button>
-        <!-- Do an event confirm who generate the uuid, then create the item-->
-</form>
+    <button pButton severity="secondary" type="submit">
+      <span pButtonLabel>Submit</span>
+    </button>
+  </form>
+</div>
