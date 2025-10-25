@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../../../service/user-service';
 import { User } from '../../../../models/user.model';
+import {v7 as generateUuid7, v7} from 'uuid';
 
 @Component({
   selector: 'app-create-user',
@@ -15,7 +16,15 @@ export class CreateUser {
   constructor(private userService:UserService){}
 
   onSubmit(){
+    this.user.id = generateUuid7();
 
-
+    this.userService.postUser(this.user).subscribe({
+    next: response => {
+      console.log("User created successfully:", response);
+    },
+    error: err => {
+      console.error("Error creating user:", err);
+    }
+  });
   }
 }
