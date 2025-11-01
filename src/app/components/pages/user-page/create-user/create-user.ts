@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../../../service/user-service';
 import { User } from '../../../../models/user.model';
-import {v7 as generateUuid7, v7} from 'uuid';
+import {v7 as generateUuid7} from 'uuid';
 
 @Component({
   selector: 'app-create-user',
   imports: [FormsModule],
+  standalone: true,
   templateUrl: './create-user.html',
   styleUrl: './create-user.scss'
 })

@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { FormList } from "../../pages/form-list/form-list";
-import { SelectButton } from 'primeng/selectbutton';
+import { SelectButtonModule } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-inicial',
-  imports: [ButtonModule, SelectButton, FormsModule, RouterOutlet],
+  imports: [ButtonModule, SelectButtonModule, FormsModule, RouterOutlet],
   standalone:true,
   templateUrl: './pagina-inicial.html',
   styleUrl: './pagina-inicial.scss'
@@ -21,9 +20,10 @@ export class PaginaInicial {
 
   onClick() {
     if (this.value === 'criarUsuario') {
-      this.router.navigate(['user/create-user']);
-    } else if (this.value === 'criarItem') {
-      this.router.navigate(['item/create-item']);
+      this.router.navigate(['user/create-an-user']);
+    }
+    if (this.value === 'criarItem') {
+      this.router.navigate(['item/create-an-item']);
     }
   }
 }

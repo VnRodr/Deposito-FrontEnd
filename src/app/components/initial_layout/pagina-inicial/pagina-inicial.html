@@ -1,13 +1,22 @@
 <div class="card position-relative">
-    <h1 class="mx-auto pb-3 pt-2">Bem vindos a página inicial!</h1>
+  <h1 class="mx-auto pb-3 pt-2">Bem vindos à página inicial!</h1>
 
-    <div class="mx-auto pb-2">
-        <p-selectbutton  [options]="pageSelection" [(ngModel)]="value" optionLabel="label" 
-        optionValue="value" aria-labelledby="basic" (onChange)="onClick()" />
-    </div>
+  <div class="mx-auto pb-2">
+    <p-selectButton 
+      [options]="pageSelection"
+      [(ngModel)]="value"
+      optionLabel="label"
+      optionValue="value"
+      aria-labelledby="basic"
+      (onChange)="onClick()">
+    </p-selectButton>
+  </div>
 
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+
+  
 </div>
+
 
 
 
