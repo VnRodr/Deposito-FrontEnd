@@ -1,12 +1,11 @@
-<!--O que estiver comentado deverá ser transformado em bootstrap (está em tailwind)-->
-<div class=""> <!--"bg-white border border-gray-200 rounded-lg p-6"-->
-    <div class=""> <!--"flex items-center justify-between"-->
-        <div class=""> <!--"flex-1"-->
-            <p class="">{label}</p> <!-- text-gray-600 mb-2 -->
-            <p class="">{value}</p> <!--text-gray-900-->
+<div class="bg-white border border-secondary rounded p-4">
+    <div class="d-flex align-items-center justify-content-between"> 
+        <div class="flex-fill"> 
+            <p class="text-secondary mb-2">{{stockSummaryItem.label}}</p> 
+            <p class="text-dark">{{stockSummaryItem.value}}</p> 
         </div>
-        <div class=""> <!--`${bgColor} p-3 rounded-lg`-->
-            <Icon class="" /> <!--`w-6 h-6 ${iconColor}`-->
+        <div [class]="stockSummaryItem.bgColor + 'p-3 rounded-3'"> 
+            <i [class]="stockSummaryItem.iconColor"></i> 
         </div>
     </div>
 </div>

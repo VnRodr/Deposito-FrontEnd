@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class StockSummary {
-  stockSummaryItems: StockSummaryItem[] = []; //por enquanto é uma lista
+  stockSummaryItem!: StockSummaryItem;
 }
 
 
