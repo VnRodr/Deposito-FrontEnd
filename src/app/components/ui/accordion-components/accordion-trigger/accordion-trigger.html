@@ -1,0 +1,12 @@
+<button 
+      class="d-flex flex-fill align-items-start justify-content-between gap-3 rounded py-3 text-start border-0 bg-transparent accordion-trigger"
+      [class.active]="isOpen"
+      (click)="toggle.emit()">
+      <ng-content></ng-content>
+      <lucide-icon 
+        [img]="ChevronDownIcon" 
+        [size]="16"
+        class="text-secondary chevron"
+        [class.rotated]="isOpen">
+      </lucide-icon>
+    </button>

@@ -6,10 +6,11 @@ import { LucideAngularModule, CircleAlert, Package, DollarSign } from 'lucide-an
   selector: 'app-stock-card',
   imports: [LucideAngularModule, CommonModule],
   templateUrl: './stock-card.html',
+  standalone: true,
   styleUrl: '../../styles/globals.scss'
 })
 
-export class StockCard {
+export class StockCardComponent {
   stockGroup!: StockGroup;
 
   statusColor = this.stockGroup.status === "warning"

@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-stock-summary',
   imports: [],
+  standalone: true,
   templateUrl: './stock-summary.html',
   styleUrl: './stock-summary.scss'
 })
 
-export class StockSummary {
+export class StockSummaryComponent {
   stockSummaryItem!: StockSummaryItem;
 }
 

@@ -1,0 +1,8 @@
+:host {
+      display: block;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+:host:last-child{
+    border-bottom: 0;
+}
