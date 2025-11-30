@@ -1,0 +1,22 @@
+<div class="card-body p-2" style="width: 200px;">
+    <div class="d-flex ps-1 p-1 flex-column gap-3 align-items-start justify-content-between bg-light rounded">
+        <div class="card-title ms-1 mt-1">
+            <h4> {{stockGroup.name}} </h4>
+        </div>
+        <div>
+            <div class="text-muted ms-1">
+                <lucide-icon [img]="Package"></lucide-icon> Itens: <span>{{stockGroup.totalItems}}</span>
+            </div>
+        </div>
+        <div>
+            <p class="text-muted ms-1">
+                <lucide-icon [img]="DollarSign"></lucide-icon> Valor: <span>{{stockGroup.value}}</span>
+            </p>
+        </div>
+        <div>
+            <div class="text-muted ms-1">
+                Estoque: <span class="text-end">{{stockGroup.status}}</span>
+            </div>
+        </div>
+    </div>
+</div>
