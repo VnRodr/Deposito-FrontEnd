@@ -1,5 +1,5 @@
 interface StockGroup {
-    id: number;
+    id: string;
     name: string;
     totalItems: number;
     value: number;
