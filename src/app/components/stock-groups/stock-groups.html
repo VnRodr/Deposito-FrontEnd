@@ -1,4 +1,10 @@
 <h3 class="mb-1 ms-2 text-secondary">Grupos de estoque</h3>
 <div>
-    <app-stock-and-status></app-stock-and-status>
+    @for (stockGroup of stockGroupList; track stockGroup) {
+        <app-stock-and-status [stockGroup]="stockGroup"></app-stock-and-status>
+    }
+    @empty {
+        <p>Nada aqui :P</p>
+    }
+    
 </div>

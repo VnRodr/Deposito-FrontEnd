@@ -8,5 +8,5 @@ import { StockAndStatus } from "./stock-and-status/stock-and-status";
   styleUrl: './stock-groups.scss'
 })
 export class StockGroups {
-
+  stockGroupList: StockGroup[] = [];
 }
