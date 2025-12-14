@@ -1,4 +1,51 @@
 <div class="d-flex align-items-center gap-2 p-2 bg-light text-dark">
     <lucide-icon [img]="Package" class="text-primary"></lucide-icon>
-    <h2 class="m-0">Sistema de estoque</h2>
+    <h3 class="m-0 flex-grow-1">Sistema de estoque</h3>
+
+    <div>
+        <button pButton (click)="showCreateStockGroupForm()">
+            <span>Novo grupo de estoque</span>
+            <div>
+                <p-dialog header="Criar novo grupo de estoque" [modal]="true" [(visible)]="visible" class="text-start">
+
+                    <div class="d-flex flex-column border-top border-bottom " style="width: 20rem;">
+                        <div class="mb-2 mt-2">
+                            <label for="nameGroup" class="font-semibold form-label">Nome do grupo</label>
+                            <input pInputText id="name" class="form-control" autocomplete="off"
+                                [(ngModel)]="stockGroup.name" name="name">
+                        </div>
+
+                        <div class="border-top py-2">Responsável pelo estoque</div>
+
+                        <div class="d-flex  justify-content-center flex-column">
+                            <div>
+                                <label for="responsible" class="font-semibold form-label">Nome Completo</label>
+                                <input pInputText id="responsible" class="form-control" autocomplete="off"
+                                    [(ngModel)]="employee.name" />
+                            </div>
+                            <div class="mt-1">
+                                <label for="email" class="font-semibold form-label">Email</label>
+                                <input pInputText id="email" class="form-control" autocomplete="off" [(ngModel)]="employee.email" />
+                            </div>
+                            <div class="mt-1">
+                                <label for="phone" class="font-semibold form-label">Telefone</label>
+                                <input pInputText id="phone" class="form-control" autocomplete="off" [(ngModel)]="employee.phone" />
+                            </div>
+                            <div class="mt-1">
+                                <label for="department" class="font-semibold form-label">Departamento</label>
+                                <input pInputText id="department" class="form-control" autocomplete="off" [(ngModel)]="employee.department" />
+                            </div>
+                            <div class="d-flex justify-content-end mt-2 mb-3">
+                                <button pButton label="Cancelar" severity="secondary" (click)="visible = false"
+                                    class="me-2"></button>
+                                <button pButton label="Criar grupo" (click)="visible = false"></button>
+                            </div>
+                        </div>
+                    </div>
+                </p-dialog>
+            </div>
+        </button>
+    </div>
+
+
 </div>
