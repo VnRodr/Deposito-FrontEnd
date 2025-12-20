@@ -8,11 +8,11 @@
             <div>
                 <p-dialog header="Criar novo grupo de estoque" [modal]="true" [(visible)]="visible" class="text-start">
 
-                    <div class="d-flex flex-column border-top border-bottom " style="width: 20rem;">
+                    <div class="d-flex flex-column border-top " [style]="{width: '20rem', height: '25rem'}">
                         <div class="mb-2 mt-2">
                             <label for="nameGroup" class="font-semibold form-label">Nome do grupo</label>
-                            <input pInputText id="name" class="form-control" autocomplete="off"
-                                [(ngModel)]="stockGroup.name" name="name">
+                            <input pInputText id="nameGroup" class="form-control" autocomplete="off"
+                                [(ngModel)]="stockGroup.name" name="nameGroup">
                         </div>
 
                         <div class="border-top py-2">Responsável pelo estoque</div>
@@ -25,20 +25,23 @@
                             </div>
                             <div class="mt-1">
                                 <label for="email" class="font-semibold form-label">Email</label>
-                                <input pInputText id="email" class="form-control" autocomplete="off" [(ngModel)]="employee.email" />
+                                <input pInputText id="email" class="form-control" autocomplete="off"
+                                    [(ngModel)]="employee.email" />
                             </div>
                             <div class="mt-1">
                                 <label for="phone" class="font-semibold form-label">Telefone</label>
-                                <input pInputText id="phone" class="form-control" autocomplete="off" [(ngModel)]="employee.phone" />
+                                <input pInputText id="phone" class="form-control" autocomplete="off"
+                                    [(ngModel)]="employee.phone" />
                             </div>
                             <div class="mt-1">
                                 <label for="department" class="font-semibold form-label">Departamento</label>
-                                <input pInputText id="department" class="form-control" autocomplete="off" [(ngModel)]="employee.department" />
+                                <input pInputText id="department" class="form-control" autocomplete="off"
+                                    [(ngModel)]="employee.department" />
                             </div>
                             <div class="d-flex justify-content-end mt-2 mb-3">
                                 <button pButton label="Cancelar" severity="secondary" (click)="visible = false"
                                     class="me-2"></button>
-                                <button pButton label="Criar grupo" (click)="visible = false"></button>
+                                <button pButton label="Criar grupo" (click)="onConfirm()"></button>
                             </div>
                         </div>
                     </div>
