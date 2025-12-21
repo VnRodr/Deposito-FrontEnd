@@ -1,7 +1,6 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { Router } from 'express';
 import { LucideAngularModule, Package, DollarSign } from 'lucide-angular';
-import { StockGroupService } from '../../../services/stock-group-service';
 
 @Component({
   selector: 'app-stock-and-status',
@@ -10,16 +9,14 @@ import { StockGroupService } from '../../../services/stock-group-service';
   styleUrl: './stock-and-status.scss'
 })
 export class StockAndStatus {
-  readonly Package = Package;
-  readonly DollarSign = DollarSign;
+  protected readonly Package = Package;
+  protected readonly DollarSign = DollarSign;
 
-  @Input() stockGroup!: StockGroup;
-
-  stockGroupService: StockGroupService = new StockGroupService();
+  @Input() public stockGroup!: StockGroup;
 
   private router = inject(Router);
 
-  goToStockItemsPage(stockGroupName: string) {
+  protected goToStockItemsPage(stockGroupName: string) {
     this.router.navigate(['/stockItens', stockGroupName]);
   }
 
