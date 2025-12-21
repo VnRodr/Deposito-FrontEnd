@@ -56,6 +56,8 @@ export class DashboardComponent {
     this.employeeService.createNewEmployee(this.employee).subscribe({
       next: (employee) => {
         console.log('Employee created successfully:', employee);
+
+        this.stockGroupService.refreshStockGroups();
       },
       error: (error) => {
         console.error('Error creating employee:', error);
