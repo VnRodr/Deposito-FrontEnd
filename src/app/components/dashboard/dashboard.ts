@@ -56,8 +56,6 @@ export class DashboardComponent {
     this.employeeService.createNewEmployee(this.employee).subscribe({
       next: (employee) => {
         console.log('Employee created successfully:', employee);
-
-        this.stockGroupService.refreshStockGroups();
       },
       error: (error) => {
         console.error('Error creating employee:', error);
@@ -67,10 +65,13 @@ export class DashboardComponent {
     this.stockGroupService.createNewStock(this.stockGroup).subscribe({
       next: (stockGroup) => {
         console.log('Stock group created successfully:', stockGroup);
+
+        this.stockGroupService.refreshStockGroups();
       },
       error: (error) => {
         console.error('Error creating stock group:', error);
       }
     });
   }
+
 }
