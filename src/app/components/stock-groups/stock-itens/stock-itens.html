@@ -5,7 +5,33 @@
         <h3 class="m-0 flex-grow-1">{{stockData.stockGroup.name}}</h3>
     </div>
 
+    <div>
+      <tr>
+        <th>SKU</th>
+        <th>Nome do item</th>
+        <th>Categoria</th>
+        <th>Quantidade</th>
+        <th>Valor por unidade</th>
+        <th>Valor total</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
 
-
+      <tr>
+        <td>{{item.SKU}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.category</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.unitValue}}</td>
+        <td>{{item.getTotalValue(item)}}</td>
+        @if(item.quantity > item.lowQuantity)
+        {
+          <td>Good</td>
+        }
+        @else{
+          <td>Low</td>
+        }
+      </tr>
+    </div>
 
 </div>
