@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LucideAngularModule, Package } from 'lucide-angular';
+import { LucideAngularModule, LucideIconData, Package, SquarePen, Trash } from 'lucide-angular';
 import { StockAndStatus } from '../stock-and-status/stock-and-status';
 import { Item } from '../../../data/item';
 import { Status } from '../../../enums/status';
@@ -13,6 +13,8 @@ import { Status } from '../../../enums/status';
 })
 export class StockItens {
   readonly Package = Package;
+  readonly SquarePen: LucideIconData = SquarePen;
+  readonly Trash: LucideIconData = Trash;
 
   stockData: StockAndStatus = new StockAndStatus();
   item!: Item; status!: Status;
